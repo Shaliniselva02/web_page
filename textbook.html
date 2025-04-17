@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML & Web Technology Textbook</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.7;
+            margin: 0;
+            padding: 20px;
+            background-color: #f5f7fa;
+            color: #333;
+        }
+        .textbook {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+        }
+        .chapter {
+            margin-bottom: 15px;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .topic {
+            padding: 18px 25px;
+            background: linear-gradient(135deg, #3498db, #2980b9);
+            color: white;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: all 0.3s;
+        }
+        .topic:hover {
+            background: linear-gradient(135deg, #2980b9, #3498db);
+        }
+        .toggle-icon {
+            font-size: 22px;
+            transition: transform 0.3s;
+        }
+        .explanation {
+            padding: 0;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.5s ease, padding 0.3s ease;
+            background: #f9f9f9;
+            border-left: 4px solid #3498db;
+        }
+        .explanation.show {
+            padding: 20px;
+            max-height: 2000px;
+        }
+        .explanation p {
+            margin: 10px 0;
+        }
+        .explanation strong {
+            color: #2c3e50;
+        }
+        code {
+            background: #eef2f7;
+            padding: 3px 6px;
+            border-radius: 4px;
+            font-family: 'Courier New', monospace;
+            color: #e74c3c;
+        }
+        pre {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 15px;
+            border-radius: 6px;
+            overflow-x: auto;
+            tab-size: 4;
+            margin: 15px 0;
+        }
+        .note {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+        .warning {
+            background: #ffebee;
+            border-left: 4px solid #f44336;
+            padding: 12px;
+            margin: 15px 0;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+    <div class="textbook">
+        <h1>HTML & Web Technology Textbook</h1>
+        
+        <!-- Chapter 1 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(1)">
+                <h2>Chapter 1: Introduction to HTML</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-1">
+                <p><strong>Topic:</strong> What is HTML?</p>
+                <p><strong>Explanation:</strong> HTML (HyperText Markup Language) is the standard markup language for documents designed to be displayed in a web browser. It defines the structure of web content through elements like headings, paragraphs, and links.</p>
+                <p><strong>Key Points:</strong></p>
+                <ul>
+                    <li>HTML is not a programming language - it's a markup language</li>
+                    <li>Uses tags like <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, and <code>&lt;body&gt;</code></li>
+                    <li>Current version is HTML5 (released in 2014)</li>
+                </ul>
+                <div class="note">
+                    <strong>Note:</strong> All HTML documents must start with <code>&lt;!DOCTYPE html&gt;</code> declaration.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chapter 2 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(2)">
+                <h2>Chapter 2: Basic HTML Document Structure</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-2">
+                <p><strong>Topic:</strong> Essential HTML Elements</p>
+                <p><strong>Explanation:</strong> Every HTML document has a basic structure that includes these key elements:</p>
+                <pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Document Title&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;!-- Content goes here --&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                <p><strong>Element Breakdown:</strong></p>
+                <ul>
+                    <li><code>&lt;!DOCTYPE html&gt;</code> - Document type declaration</li>
+                    <li><code>&lt;html&gt;</code> - Root element</li>
+                    <li><code>&lt;head&gt;</code> - Contains meta information</li>
+                    <li><code>&lt;body&gt;</code> - Contains visible content</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Chapter 3 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(3)">
+                <h2>Chapter 3: HTML Text Elements</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-3">
+                <p><strong>Topic:</strong> Text Formatting in HTML</p>
+                <p><strong>Explanation:</strong> HTML provides various elements for text structure and formatting:</p>
+                <pre>
+&lt;h1&gt;Main Heading&lt;/h1&gt;
+&lt;h2&gt;Subheading&lt;/h2&gt;
+&lt;p&gt;This is a paragraph.&lt;/p&gt;
+&lt;p&gt;This text is &lt;strong&gt;bold&lt;/strong&gt; and &lt;em&gt;italicized&lt;/em&gt;.&lt;/p&gt;
+&lt;ul&gt;
+    &lt;li&gt;Unordered list item&lt;/li&gt;
+&lt;/ul&gt;
+&lt;ol&gt;
+    &lt;li&gt;Ordered list item&lt;/li&gt;
+&lt;/ol&gt;
+                </pre>
+                <p><strong>Common Text Elements:</strong></p>
+                <ul>
+                    <li>Headings: <code>&lt;h1&gt;</code> to <code>&lt;h6&gt;</code></li>
+                    <li>Paragraph: <code>&lt;p&gt;</code></li>
+                    <li>Bold: <code>&lt;strong&gt;</code> or <code>&lt;b&gt;</code></li>
+                    <li>Italic: <code>&lt;em&gt;</code> or <code>&lt;i&gt;</code></li>
+                    <li>Lists: <code>&lt;ul&gt;</code>, <code>&lt;ol&gt;</code>, <code>&lt;li&gt;</code></li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Chapter 4 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(4)">
+                <h2>Chapter 4: HTML Links and Images</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-4">
+                <p><strong>Topic:</strong> Connecting Content with Links and Images</p>
+                <p><strong>Explanation:</strong> HTML allows embedding hyperlinks and images using these elements:</p>
+                <pre>
+&lt;!-- Link to another page --&gt;
+&lt;a href="https://example.com"&gt;Visit Example&lt;/a&gt;
+
+&lt;!-- Link to email --&gt;
+&lt;a href="mailto:contact@example.com"&gt;Email Us&lt;/a&gt;
+
+&lt;!-- Image --&gt;
+&lt;img src="image.jpg" alt="Description" width="200"&gt;
+                </pre>
+                <p><strong>Key Attributes:</strong></p>
+                <ul>
+                    <li><code>href</code> - Specifies the link destination</li>
+                    <li><code>src</code> - Specifies the image source</li>
+                    <li><code>alt</code> - Provides alternative text for images</li>
+                    <li><code>target="_blank"</code> - Opens link in new tab</li>
+                </ul>
+                <div class="note">
+                    <strong>Best Practice:</strong> Always include <code>alt</code> text for accessibility and SEO.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chapter 5 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(5)">
+                <h2>Chapter 5: HTML Tables</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-5">
+                <p><strong>Topic:</strong> Organizing Data with Tables</p>
+                <p><strong>Explanation:</strong> Tables are created using these elements:</p>
+                <pre>
+&lt;table border="1"&gt;
+    &lt;tr&gt;
+        &lt;th&gt;Header 1&lt;/th&gt;
+        &lt;th&gt;Header 2&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 1, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 1, Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;Row 2, Cell 1&lt;/td&gt;
+        &lt;td&gt;Row 2, Cell 2&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;
+                </pre>
+                <p><strong>Table Elements:</strong></p>
+                <ul>
+                    <li><code>&lt;table&gt;</code> - Defines the table</li>
+                    <li><code>&lt;tr&gt;</code> - Table row</li>
+                    <li><code>&lt;th&gt;</code> - Table header cell</li>
+                    <li><code>&lt;td&gt;</code> - Table data cell</li>
+                    <li><code>&lt;caption&gt;</code> - Table caption</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Chapter 6 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(6)">
+                <h2>Chapter 6: HTML Forms</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-6">
+                <p><strong>Topic:</strong> User Input with Forms</p>
+                <p><strong>Explanation:</strong> HTML forms collect user input through various controls:</p>
+                <pre>
+&lt;form action="/submit" method="post"&gt;
+    &lt;label for="name"&gt;Name:&lt;/label&gt;
+    &lt;input type="text" id="name" name="name" required&gt;
+    
+    &lt;label for="email"&gt;Email:&lt;/label&gt;
+    &lt;input type="email" id="email" name="email" required&gt;
+    
+    &lt;label for="password"&gt;Password:&lt;/label&gt;
+    &lt;input type="password" id="password" name="password"&gt;
+    
+    &lt;input type="submit" value="Submit"&gt;
+&lt;/form&gt;
+                </pre>
+                <p><strong>Form Elements:</strong></p>
+                <ul>
+                    <li><code>&lt;form&gt;</code> - Container for form elements</li>
+                    <li><code>&lt;input&gt;</code> - Various input types (text, email, password, etc.)</li>
+                    <li><code>&lt;label&gt;</code> - Description for form controls</li>
+                    <li><code>&lt;select&gt;</code> - Dropdown list</li>
+                    <li><code>&lt;textarea&gt;</code> - Multi-line text input</li>
+                </ul>
+                <div class="note">
+                    <strong>Tip:</strong> Always pair <code>&lt;label&gt;</code> with form controls using the <code>for</code> attribute.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chapter 7 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(7)">
+                <h2>Chapter 7: Semantic HTML</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-7">
+                <p><strong>Topic:</strong> Meaningful Structure with Semantic Elements</p>
+                <p><strong>Explanation:</strong> HTML5 introduced semantic elements that clearly describe their meaning:</p>
+                <pre>
+&lt;header&gt;
+    &lt;h1&gt;Website Title&lt;/h1&gt;
+    &lt;nav&gt;
+        &lt;a href="/"&gt;Home&lt;/a&gt;
+        &lt;a href="/about"&gt;About&lt;/a&gt;
+    &lt;/nav&gt;
+&lt;/header&gt;
+&lt;main&gt;
+    &lt;article&gt;
+        &lt;h2&gt;Blog Post Title&lt;/h2&gt;
+        &lt;p&gt;Article content...&lt;/p&gt;
+    &lt;/article&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+    &lt;p&gt;Copyright 2023&lt;/p&gt;
+&lt;/footer&gt;
+                </pre>
+                <p><strong>Key Semantic Elements:</strong></p>
+                <ul>
+                    <li><code>&lt;header&gt;</code> - Introductory content</li>
+                    <li><code>&lt;nav&gt;</code> - Navigation links</li>
+                    <li><code>&lt;main&gt;</code> - Primary content</li>
+                    <li><code>&lt;article&gt;</code> - Self-contained composition</li>
+                    <li><code>&lt;section&gt;</code> - Thematic grouping</li>
+                    <li><code>&lt;footer&gt;</code> - Footer content</li>
+                </ul>
+                <div class="note">
+                    <strong>Why Semantic HTML?</strong> Improves accessibility, SEO, and code maintainability.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chapter 8 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(8)">
+                <h2>Chapter 8: HTML Multimedia</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-8">
+                <p><strong>Topic:</strong> Embedding Audio and Video</p>
+                <p><strong>Explanation:</strong> HTML5 provides native multimedia support:</p>
+                <pre>
+&lt;!-- Audio --&gt;
+&lt;audio controls&gt;
+    &lt;source src="audio.mp3" type="audio/mpeg"&gt;
+    Your browser does not support audio.
+&lt;/audio&gt;
+
+&lt;!-- Video --&gt;
+&lt;video width="400" controls&gt;
+    &lt;source src="video.mp4" type="video/mp4"&gt;
+    Your browser does not support video.
+&lt;/video&gt;
+
+&lt;!-- YouTube Embed --&gt;
+&lt;iframe width="560" height="315" 
+    src="https://www.youtube.com/embed/dQw4w9WgXcQ" 
+    frameborder="0" allowfullscreen&gt;
+&lt;/iframe&gt;
+                </pre>
+                <p><strong>Multimedia Elements:</strong></p>
+                <ul>
+                    <li><code>&lt;audio&gt;</code> - Embeds sound content</li>
+                    <li><code>&lt;video&gt;</code> - Embeds video content</li>
+                    <li><code>&lt;source&gt;</code> - Specifies media sources</li>
+                    <li><code>&lt;iframe&gt;</code> - Embeds external content</li>
+                </ul>
+                <div class="warning">
+                    <strong>Warning:</strong> Always include fallback content for browsers that don't support these elements.
+                </div>
+            </div>
+        </div>
+        
+        <!-- Chapter 9 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(9)">
+                <h2>Chapter 9: HTML5 APIs</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-9">
+                <p><strong>Topic:</strong> Advanced HTML5 Features</p>
+                <p><strong>Explanation:</strong> HTML5 introduced powerful APIs for enhanced functionality:</p>
+                <pre>
+&lt;!-- Geolocation API --&gt;
+&lt;button onclick="getLocation()"&gt;Get Location&lt;/button&gt;
+&lt;p id="demo"&gt;&lt;/p&gt;
+&lt;script&gt;
+function getLocation() {
+    if (navigator.geolocation) {
+        navigator.geolocation.getCurrentPosition(showPosition);
+    }
+}
+function showPosition(position) {
+    document.getElementById("demo").innerHTML = 
+        "Latitude: " + position.coords.latitude + 
+        "&lt;br&gt;Longitude: " + position.coords.longitude;
+}
+&lt;/script&gt;
+
+&lt;!-- Local Storage --&gt;
+&lt;script&gt;
+localStorage.setItem("name", "John");
+alert(localStorage.getItem("name"));
+&lt;/script&gt;
+                </pre>
+                <p><strong>Key HTML5 APIs:</strong></p>
+                <ul>
+                    <li><strong>Geolocation</strong> - Gets user's physical location</li>
+                    <li><strong>Web Storage</strong> - localStorage and sessionStorage</li>
+                    <li><strong>Canvas</strong> - Drawing graphics with JavaScript</li>
+                    <li><strong>Drag and Drop</strong> - Native drag-and-drop interface</li>
+                    <li><strong>Web Workers</strong> - Background script execution</li>
+                </ul>
+            </div>
+        </div>
+        
+        <!-- Chapter 10 -->
+        <div class="chapter">
+            <div class="topic" onclick="toggleExplanation(10)">
+                <h2>Chapter 10: HTML Best Practices</h2>
+                <span class="toggle-icon">+</span>
+            </div>
+            <div class="explanation" id="explanation-10">
+                <p><strong>Topic:</strong> Writing Clean, Accessible HTML</p>
+                <p><strong>Explanation:</strong> Professional HTML development requires following these practices:</p>
+                <pre>
+&lt;!-- Good HTML Example --&gt;
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+&lt;head&gt;
+    &lt;meta charset="UTF-8"&gt;
+    &lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+    &lt;title&gt;Proper Document Structure&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+    &lt;header&gt;
+        &lt;h1&gt;Main Heading&lt;/h1&gt;
+        &lt;nav aria-label="Main navigation"&gt;
+            &lt;ul&gt;
+                &lt;li&gt;&lt;a href="#home"&gt;Home&lt;/a&gt;&lt;/li&gt;
+            &lt;/ul&gt;
+        &lt;/nav&gt;
+    &lt;/header&gt;
+    &lt;main&gt;
+        &lt;article&gt;
+            &lt;h2&gt;Article Title&lt;/h2&gt;
+            &lt;p&gt;Content with proper &lt;strong&gt;semantics&lt;/strong&gt;.&lt;/p&gt;
+        &lt;/article&gt;
+    &lt;/main&gt;
+    &lt;footer&gt;
+        &lt;p&gt;&amp;copy; 2023 My Site&lt;/p&gt;
+    &lt;/footer&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+                </pre>
+                <p><strong>Best Practices:</strong></p>
+                <ul>
+                    <li>Use proper document structure with DOCTYPE</li>
+                    <li>Always include <code>lang</code> attribute</li>
+                    <li>Use semantic elements where appropriate</li>
+                    <li>Provide alternative text for images</li>
+                    <li>Ensure proper heading hierarchy</li>
+                    <li>Validate your HTML (W3C Validator)</li>
+                    <li>Consider accessibility (ARIA attributes)</li>
+                </ul>
+                <div class="note">
+                    <strong>Pro Tip:</strong> Use the W3C Markup Validation Service to check your HTML for errors.
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleExplanation(chapterNum) {
+            const explanation = document.getElementById(explanation-${chapterNum});
+            const toggleIcon = explanation.previousElementSibling.querySelector('.toggle-icon');
+            
+            explanation.classList.toggle('show');
+            
+            if (explanation.classList.contains('show')) {
+                toggleIcon.textContent = '−';
+                toggleIcon.style.transform = 'rotate(0deg)';
+            } else {
+                toggleIcon.textContent = '+';
+                toggleIcon.style.transform = 'rotate(90deg)';
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Syllabus - Web Technology/048</title>
+  <style>
+    body {
+      font-family: "Times New Roman", serif;
+      background-color: #f9f9f9;
+      display: flex;
+      justify-content: center;
+      padding: 50px;
+    }
+
+    .syllabus-box {
+      background-color: #ffffff;
+      border: 3px solid goldenrod;
+      border-radius: 15px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      padding: 30px;
+      width: 80%;
+      max-width: 900px;
+    }
+
+    .syllabus-title {
+      text-align: center;
+      font-size: 28px;
+      font-weight: bold;
+      color: #1e3a8a;
+      margin-bottom: 20px;
+    }
+
+    .topic {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+      cursor: pointer;
+      color: #d63384; /* pink */
+      font-size: 20px;
+    }
+
+    .explanation {
+      display: none;
+      padding: 10px 15px;
+      font-size: 16px;
+      color: #333;
+      background-color: #fdf5e6; /* soft golden yellow */
+      border-left: 4px solid #ffd700;
+      margin-bottom: 10px;
+    }
+
+    .topic:hover {
+      color: #ff69b4;
+    }
+  </style>
+</head>
+<body>
+  <div class="syllabus-box">
+    <div class="syllabus-title">Web Technology/048 - Syllabus</div>
+
+    <div class="topic" onclick="toggleExplanation(0)">1. Introduction to Web Development</div>
+    <div class="explanation">Overview of internet, web browsers, HTML basics, structure of a website, and the client-server model.</div>
+
+    <div class="topic" onclick="toggleExplanation(1)">2. HTML5 Fundamentals</div>
+    <div class="explanation">Understanding HTML tags, semantic elements, forms, media elements, and creating a basic webpage layout.</div>
+
+    <div class="topic" onclick="toggleExplanation(2)">3. Cascading Style Sheets (CSS)</div>
+    <div class="explanation">Styling with CSS, selectors, colors, fonts, box model, flexbox, grid, and responsive design techniques.</div>
+
+    <div class="topic" onclick="toggleExplanation(3)">4. JavaScript Basics</div>
+    <div class="explanation">Variables, data types, operators, functions, loops, conditionals, and handling user interactions with JS.</div>
+
+    <div class="topic" onclick="toggleExplanation(4)">5. DOM Manipulation</div>
+    <div class="explanation">Understanding the Document Object Model, selecting elements, updating content, and event handling in JS.</div>
+
+    <div class="topic" onclick="toggleExplanation(5)">6. Web Forms and Validation</div>
+    <div class="explanation">Creating forms, input types, HTML5 validation, and custom validation using JavaScript.</div>
+
+    <div class="topic" onclick="toggleExplanation(6)">7. Introduction to Web Hosting</div>
+    <div class="explanation">Domain names, hosting services, FTP, and deploying websites using GitHub Pages.</div>
+
+    <div class="topic" onclick="toggleExplanation(7)">8. Introduction to Bootstrap</div>
+    <div class="explanation">Using Bootstrap for responsive design, grid system, components like navbar, cards, modals, etc.</div>
+
+    <div class="topic" onclick="toggleExplanation(8)">9. Introduction to JavaScript Frameworks</div>
+    <div class="explanation">Brief overview of popular frameworks like React, Angular, Vue – with focus on how they differ from plain JS.</div>
+
+    <div class="topic" onclick="toggleExplanation(9)">10. Project and Real-World Applications</div>
+    <div class="explanation">Final website project using all concepts, real-world use cases, and portfolio presentation tips.</div>
+  </div>
+
+  <script>
+    function toggleExplanation(index) {
+      const explanations = document.querySelectorAll('.explanation');
+      explanations[index].style.display = explanations[index].style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
+</body>
+</html>
